@@ -45,3 +45,21 @@ $./print
 ```
 -Output:The a.out format is the original file format for Unix.  It consists of three sections: text,data, and bss, which are for program code, initialized data, and uninitialized data, respectively.  This format is so simple that it doesn't have any reserved place for debugging information.  The only debugging format for a.out is stabs, which is encoded as a set of normal symbols with distinctive attributes.
 
+Once the make command is executed the files were made in the given directory with their following extension.
+The commands in makefile are not executed as they are written but are executed according to their dependencies.
+
+All the steps mentioned above are processed through a make file which allows us to do all the steps in a single command.Thus reducing the work and makes the debugging easier and less error prone.
+The following was the makefile description.
+```
+#Makefile
+all: print print.o
+print:print.o
+	gcc print.o -o print
+
+print.o:print.c
+	gcc -c print.c -o print.o
+	gcc -S print.c -o print.s
+	gcc -E print.c -o print.i
+```
+
+
