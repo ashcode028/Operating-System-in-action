@@ -43,7 +43,7 @@ ans2:q4_64.o q4b.o
 	@echo
 ```
 In 32 bit assembly accessing parameters in stack is the only way to access parameters but in 64
-accessing parameters through stack is not possinble thus defualt registers are used for
+accessing parameters through stack is not possible thus default registers are used for
 accessing.
 
 - 32 bit assembly [code](Just_beginner_things/A2/q4_32.asm)
