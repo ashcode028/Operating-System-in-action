@@ -7,7 +7,7 @@ Demonstration to show standlone assembly codes can be called the same way as ass
 - start acts as a main function in assembly.
 - mov parameters to rsi,rdi (default registers to pass arguments)
 - call checkgreater.
-- the ouput of the function is done by `write syscall`
+- the ouput of the `_checkGreater` is done by `write syscall`
 ```
 _print1:			    ;label to print 1 if x>y
 	mov rax,1		    ;write syscall
@@ -50,7 +50,21 @@ q1:q1.o
 	@echo 
 ```
 ## Steps to call assembly routine from C
-
+- Sample c code [checkGreater.c](Just_beginner_things/A1/checkGreater.c)
+- Function declaration before main function as shown in line 1(mention return type,function name, parameters if any)
+- calling the function in main as in line 2
+```
+#include <stdlib.h>
+#include<inttypes.h>
+void _checkGreater(int64_t,int64_t); // line1
+int main(){
+_checkGreater(42,53);      //line 2
+return 0;
+}
+```
+- Assembly code remains same as before.
+- remove `_start` in text section and replace it with your function name(here `_checkGreater`)
+- rest of the code remains the same.
 
 Make file changes
 ```
@@ -70,3 +84,4 @@ ans:q1.o checkGreater.o
 	./ans
 	@echo	
 ```
+Finally you tested standlone assembly programs can be called from C as well !.You can visit read [nasm tutorial](https://cs.lmu.edu/~ray/notes/nasmtutorial/) to know the syntax.
