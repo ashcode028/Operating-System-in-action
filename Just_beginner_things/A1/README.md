@@ -1,5 +1,5 @@
 # Testing 
-Demonstration to show standlone assembly codes can be called the same way as assembly rountines are called.
+Demonstration to show standlone assembly codes can be called the same way as assembly rountines are called from C programs.
 
 ## Steps to run standlone assembly
 - Sample code [q1.asm](Just_beginner_things/A1/q1.asm)
