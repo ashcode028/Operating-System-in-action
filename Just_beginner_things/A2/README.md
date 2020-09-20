@@ -65,7 +65,7 @@ _long_add32:
 	pop ebp
 	ret
 ```
-- 64 bit assembly code(Just_beginner_things/A2/q4_64.asm)
+- 64 bit assembly [code](Just_beginner_things/A2/q4_64.asm)
 ```
 SECTION .text
 	global _long_add64
