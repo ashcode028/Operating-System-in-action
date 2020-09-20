@@ -15,3 +15,6 @@ Any changes/updates are welcomed.
 ## Beginners-
 - [GCC and makefiles](Just_beginner_things/Compilation&Makefiles/README.md)
 - [C and Assembly](Just_beginner_things/Combining_C&Assembly/README.md)
+- [C and Assembly2](Just_beginner_things/A1/README.md)
+- [Pointer Casting in C]()
+
