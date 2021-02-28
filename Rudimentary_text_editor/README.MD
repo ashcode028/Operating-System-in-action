@@ -122,7 +122,15 @@ printf("Warning Already opened...\n");
     	printf("locked file\n");
 ```
 We get notifications of getting unclocked but not for acquiring lock.
-
+### TRY YOURSELF
+- Clone the repo navigate to folder called Rudimentary_text_editor
+- Open the folder in terminal and run `make`
+- Shell Script:
+```
+#!/bin/bash
+xterm -e bash -c "./editor test.txt; bash" &
+xterm -e bash -c "./editor test.txt; bash" &
+```
 
 ## Sources-
   https://gavv.github.io/articles/file-locks/#test-program
