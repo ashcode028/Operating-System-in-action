@@ -43,7 +43,7 @@ void add_n(char t[],struct Node *q)        //function to add a new node after a 
 	p->prev=q;
 	p->next=q->next;
 
-	if((q->next)!=NULL)        //adding the node to the list by manipulating pointers 	accordingly
+	if((q->next)!=NULL)        //adding the node to the list by manipulating pointers accordingly
 	{
 	((q->next)->prev)=p;
 	while(temp!=NULL)
@@ -78,7 +78,7 @@ void save(FILE *fp)                            //function to save the file
 	struct Node *temp=head->next;
 	while(temp!=NULL)
 	{
-	fprintf(fp,"%s",temp->s);                    //writing the linked list contents to file
+	fprintf(fp,"%s",temp->s);               //writing the linked list contents to file
 	temp=temp->next;
 	}
 }
