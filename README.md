@@ -21,7 +21,7 @@ Any changes/updates are welcomed.
 - [Pointer Casting in C](Just_beginner_things/pointer_casting/README.md)
 - [Differences In calling conventions 32 bit and 64 bit assembly codes](Just_beginner_things/A2/README.md)
 
-### Contents:
+### Intermediate:
   1. [Adding a systemcall](Adding_Syscall/README.MD)
   2. [DiningPhilosophers using Semaphores-customised](ModifiedDiningPhilosophers/README.MD)
   3. [Parsing csv files using syscalls](Read_csv_using_syscalls/README.MD)
