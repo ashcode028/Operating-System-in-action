@@ -2,8 +2,8 @@
 Demonstration to read csv using fgets and then calculate average of the scores of section A and section B using fork().
 
 # Steps to run 
-  - Sample [code](Read_csv_using_syscalls/q1.c) 
-  - Make file contents should be if name of the file is *q1.c*
+  - Sample [code](Read_csv_using_syscalls/q1.c) file name *q1.c* 
+  - Make file contents- (when name of the file is *q1.c*)
 ```
 #Makefile
 all: q1 q1.o
