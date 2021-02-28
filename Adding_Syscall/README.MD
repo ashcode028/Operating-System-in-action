@@ -1,4 +1,7 @@
 # Adding a syscall in kernal v5.9
+Demonstration 
+	- follow [this](https://dev.to/jasper/adding-a-system-call-to-the-linux-kernel-5-8-1-in-ubuntu-20-04-lts-2ga8) tutorial to see the basic template of adding a syscall.
+	- DO it in a virtual box if in windows or vmware if in linux 
  - Made syscall which takes pid and filename as input.```SYSCALL_DEFINE2(sh_task_info, int, pid,char *,filename)```
  - Task struct of the given pid is found by using find_vpid() function.```task = pid_task(find_vpid(pid), PIDTYPE_PID);```
  - Using that pointer printed out its fields to console using printk() function.
@@ -84,5 +87,5 @@ int main(int argc, char **argv)
   - Error message is printed is printed in both the cases and shown in error log.
   - diff command```sudo diff -Nrq ~/linux-5.9.1/ ~/Desktop/linux-5.9.1 > ~/Documents/Os/OSAssign2/Q2/diff.txt ```
 ## Sources- 
-stackoverflow,dev.to,medium,kernal documentation,howtoforge..com,lab assignment guidelines of various international institutes(cant remember names).
+stackoverflow,[dev.to](https://dev.to/jasper/adding-a-system-call-to-the-linux-kernel-5-8-1-in-ubuntu-20-04-lts-2ga8),medium,kernal documentation,howtoforge..com,lab assignment guidelines of various international institutes(cant remember names).
 
