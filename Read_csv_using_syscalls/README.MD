@@ -86,4 +86,7 @@ to be opened as```FILE *fd= fopen("data.csv","r") ```
   - The input file must have only these entries and in the same order as roll
 no,section,marks1,marks2,marks3,marks4.
   - The input file is a space separated csv file named as [data.csv](Read_csv_using_syscalls/data.csv).
+### TRY YOURSELF
+- Clone the repo navigate to folder called Read_csv_using_syscalls
+- Open the folder in terminal and run `make`
 
