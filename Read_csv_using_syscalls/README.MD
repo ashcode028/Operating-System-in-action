@@ -54,8 +54,13 @@ line and its values.Thus,incorrect values get stored into the specific fields of
 struct thereby giving wrong output.
 ## Syscalls ,arguments,outcomes
   - Read syscall-requires file descriptor
+   ``` read(fd,buff,1024);
+   	 printf("%s",buff );
+	 write(1,buff,1024)
+```
   - Fgets-requires pointer to that file ,size of the input line and the pointer to store
-input line. Once the line is stored in the array,I used string_token (strtok())to
+input line. ```while(fgets(temp[i],1024,fd))```
+  - Once the line is stored in the array,I used string_token ```strtok()``` to
 break it into parts and store it in the respective fields of the struct(here student).
   - Usually open ```int fd= open("data.csv",O_RDONLY)```is used to get file descriptor since I used fgets(), I used fopen to get file pointer.Both take similar arguments name of the file and mode of the file
 to be opened as```FILE *fd= fopen("data.csv","r") ```
