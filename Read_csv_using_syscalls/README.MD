@@ -1,5 +1,5 @@
 # READING CSV USING SYSTEM CALLS
-Demonstration to read csv using fgets and then calculate average of the scores using fork().
+Demonstration to read csv using fgets and then calculate average of the scores of section A and section B using fork().
 
 # Steps to run 
   - Sample [code](Read_csv_using_syscalls/q1.c) 
