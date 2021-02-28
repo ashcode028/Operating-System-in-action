@@ -76,3 +76,6 @@ int main()
   - Hence, when child thread was made it started from current value of the global variable.
   - In case of fork- since data isnt shared each process runs independent of each other whereas threads can modify and get other threads' data from its shared resources.
   - Usually when child has same task as that of parent fork is used but when child(rather sibling in case of threads) has to complete a sub task of the parent threads are used. 
+### TRY YOURSELF
+- Clone the repo navigate to folder called PthreadVsFork
+- Open the folder in terminal and run `make`
