@@ -77,7 +77,9 @@ Once I'm done eating I notify that resources are available.
 
 In both the implementation only one philosopher is allowed to enter and eat since both
 the bowls should be available simultaneously to eat.
-
+### TRY YOURSELF
+- Clone the repo navigate to folder called ModifiedDiningPhilosophers
+- Open the folder in terminal and run `make`
 ## SOURCES:
 https://docs.oracle.com/cd/E19683-01/806-6867/6jfpgdcnd/index.html
 geeksforgeeks articles, http://cs241.cs.illinois.edu/coursebook/Synchronization#mutex,
