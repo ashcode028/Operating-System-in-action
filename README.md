@@ -20,7 +20,7 @@ Any changes/updates are welcomed.
 - [C and Assembly2](Just_beginner_things/A1/README.md)
 - [Pointer Casting in C](Just_beginner_things/pointer_casting/README.md)
 - [Differences In calling conventions 32 bit and 64 bit assembly codes](Just_beginner_things/A2/README.md)
-### Intermediate:
+### [Intermediate](Intermediate):
   1. Pipes-Write a C program which forks a child process. The parent process is responsible for accepting an input, and sending it to the child process through a pipe. The child process converts it into upper case, and sends the modified character back to the parent process. The parent process then prints the character received to a console.
   2. MessageQueues-Write two C programs, each of which reads the files “para1.txt” and “para2.txt” respectively.Split the text into tokens based on spaces. Create a message queue and use the same message queue to send the individual tokens to a third program. This third program should print the received message as is on the console.
   3. Sockets-Repeat the same process, but this time send it using datagram sockets. You can use different sockets to send messages, but the same port number should be used to receive them.
