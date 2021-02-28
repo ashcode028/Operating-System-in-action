@@ -26,12 +26,11 @@ int getch()                            //terminal I/O
 	return ch;
 }
 ```
-tcgetattr — get the parameters associated with the terminal
-Attribute selection-
-      TCSANOW-Change attributes immediately.
- Flags disabled-
-      ECHO        Enable echo.
-      ICANON      Canonical input (erase and kill processing).
+1. ```tcgetattr``` — get the parameters associated with the terminal
+2. Attribute selection- ```TCSANOW```-Change attributes immediately.
+3. Flags disabled-
+     - ```ECHO```        Enable echo.
+     - ```ICANON```      Canonical input (erase and kill processing).
 
 **addnode**
 	- function to add a new node after a node q
