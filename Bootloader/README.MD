@@ -41,6 +41,9 @@ How to run the bootloader in qemu
         j. continue till its zero 
     E.halt
         clear interuppt flag and halt execution
+### TRY YOURSELF
+- Clone the repo navigate to folder called Bootloader
+- Open the folder in terminal and run `make`
 ## sources-
 https://dev.to/frosnerd/writing-my-own-boot-loader-3mld
 https://blog.ghaiklor.com/2017/10/21/how-to-implement-your-own-hello-world-boot-loader/
