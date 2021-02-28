@@ -26,3 +26,18 @@ was 3 digit and marks in 1 digit.
 more or less bytes got affected in the second run of loop so i couldn't extract the
 line and its values.Thus,incorrect values get stored into the specific fields of the
 struct thereby giving wrong output.
+## Syscalls ,arguments,outcomes
+  - Read syscall-requires file descriptor
+  - Fgets-requires pointer to that file ,size of the input line and the pointer to store
+input line. Once the line is stored in the array,I used string_token (strtok())to
+break it into parts and store it in the respective fields of the struct(here student).
+  - Usually open -is used to get file descriptor since I used fgets(), I used fopen to
+get file pointer.Both take similar arguments name of the file and mode of the file
+to be opened as(fopen-”r”.”w” ; open- O_RDONLY,O_WRONLY etc) .
+  - I used the printf function to print the values to the console .
+
+## Assumptions made
+  - The input file must contain the first line as a label(student id,section,scores etc).
+  - The input file must have only these entries and in the same order as roll
+no,section,marks1,marks2,marks3,marks4.
+  - The input file is a space separated csv file named as “data.csv”.
