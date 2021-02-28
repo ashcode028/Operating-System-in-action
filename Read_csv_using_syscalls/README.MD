@@ -54,9 +54,10 @@ line and its values.Thus,incorrect values get stored into the specific fields of
 struct thereby giving wrong output.
 ## Syscalls ,arguments,outcomes
   - Read syscall-requires file descriptor
-   ``` read(fd,buff,1024);
-   	 printf("%s",buff );
-	 write(1,buff,1024)
+ ```
+   read(fd,buff,1024);
+   printf("%s",buff );
+   write(1,buff,1024)
 ```
   - Fgets-requires pointer to that file ,size of the input line and the pointer to store
 input line. ```while(fgets(temp[i],1024,fd))```
@@ -70,5 +71,5 @@ to be opened as```FILE *fd= fopen("data.csv","r") ```
   - The input file must contain the first line as a label(student id,section,scores etc).
   - The input file must have only these entries and in the same order as roll
 no,section,marks1,marks2,marks3,marks4.
-  - The input file is a space separated csv file named as “data.csv”.
+  - The input file is a space separated csv file named as [data.csv](Read_csv_using_syscalls/data.csv).
 
