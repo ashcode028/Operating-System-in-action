@@ -1,8 +1,8 @@
 # Adding a syscall in kernal v5.9
-Demonstration 
+Demonstration
 	- follow [this](https://dev.to/jasper/adding-a-system-call-to-the-linux-kernel-5-8-1-in-ubuntu-20-04-lts-2ga8) tutorial to see the basic template of adding a syscall.
 	- DO it in a virtual box if in windows or vmware if in linux 
- - Made syscall which takes pid and filename as input.```SYSCALL_DEFINE2(sh_task_info, int, pid,char *,filename)```
+ - Made syscall which takes pid and filename as input.```SYSCALL_DEFINE2(sh_task_info, int, pid,char *,filename)```and prints fields of task_struct in a filename.
  - Task struct of the given pid is found by using find_vpid() function.```task = pid_task(find_vpid(pid), PIDTYPE_PID);```
  - Using that pointer printed out its fields to console using printk() function.
  - Using sprintf function i stored data into a buffer so that i can send it as a pointer to my kernal write.
