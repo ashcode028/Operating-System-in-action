@@ -23,6 +23,20 @@ q1.o:q1.c
 average.
   - Made an array of struct students and computed average differently for both
 processes.
+```
+
+typedef struct student{
+   int rollno;
+   char section[1];
+   int marks1;
+   int marks2;
+   int marks3;
+   int marks4;
+   float avg;
+
+}stud;
+
+```
   - Removed the storage of the first line i.e label so that the values are stored accordingly.
 
 ## Error handling
