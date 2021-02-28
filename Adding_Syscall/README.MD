@@ -89,3 +89,6 @@ int main(int argc, char **argv)
 ## Sources- 
 stackoverflow,[dev.to](https://dev.to/jasper/adding-a-system-call-to-the-linux-kernel-5-8-1-in-ubuntu-20-04-lts-2ga8),medium,kernal documentation,howtoforge..com,lab assignment guidelines of various international institutes(cant remember names).
 
+### TRY YOURSELF
+- Clone the repo navigate to folder called Adding_Syscall
+- Open the folder in terminal and run `make`
