@@ -19,7 +19,7 @@ issues without wasting CPU cycles(also avoids deadlock)
 
 Two primitives are :*wait,signal* -both are wrapped using lock to ensure only one thread is there.
 
-init function ​ initialises the fields with default values.
+**init function** initialises the fields with default values.
 ```
 int sem_init(my_semaphore *s, int value) {
   s->value = value;                 /* initialize the counter to the given value */
@@ -28,7 +28,7 @@ int sem_init(my_semaphore *s, int value) {
   return 0;
 }
 ```
-signal_print_s ​ prints the current value of the semaphore .
+**signal_print_s** prints the current value of the semaphore .
 ```
 int signal_print_s(my_semaphore *s){
 	printf("\nValue of semaphore:%d",(int)s->value);
@@ -38,7 +38,7 @@ int signal_print_s(my_semaphore *s){
 For the blocking variant I have locked using ``` pthread_mutex_lock ``` and for the non-blocking
 variant I have used ``` pthread_mutex_trylock ``` rest all the code is the same.
 My algorithm is working fine for both the variants
-  - signal_s(blocking) /signal_ns(non_blocking)-
+  - **signal_s(blocking) /signal_ns(non_blocking)**-
 This is responsible for incrementing the count and to wake up any sleeping thread inside
 the condition variable.For efficiency we call ​ pthread_cond_signal ​ only when there are
 waiting threads
@@ -51,7 +51,7 @@ waiting threads
   pthread_mutex_unlock(&s->m);   /* unlock the semaphore*/
 }
 ```
-  - wait_s(blocking) /wait_ns(non_blocking)-
+  - **wait_s(blocking) /wait_ns(non_blocking)**-
 This is responsible for decrement of the value only when its not zero ,till then it waiting
 inside the condition variable and mutex is unlocked so
 that other threads can enter.
@@ -66,12 +66,12 @@ that other threads can enter.
 }
 ```
 ## Dining philosophers i have implemented in two ways
-  - Philosophers are Semaphores- here i check whether my neighbor is eating or not and
+  - Philosophers are Semaphores- [here](ModifiedDiningPhilosophers/a4_2019028.c) i check whether my neighbor is eating or not and
 then check both the bowls are available or not
 and then proceed to eat.
 Once i am done eating i notify my neighbors i completed if any one was hungry they will
 eat.
-  - Resources(forks,bowls) are Semaphores- here i check whether the forks,bowls i need
+  - Resources(forks,bowls) are Semaphores- [here](ModifiedDiningPhilosophers/A4_2019028.c) i check whether the forks,bowls i need
 are there or not ,if present i will eat or else will wait in condition variable.
 Once I'm done eating I notify that resources are available.
 
