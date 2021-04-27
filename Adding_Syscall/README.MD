@@ -5,9 +5,9 @@ Demonstration
  - Made syscall which takes pid and filename as input.```SYSCALL_DEFINE2(sh_task_info, int, pid,char *,filename)```and prints fields of task_struct in a filename.
  - Task struct of the given pid is found by using find_vpid() function.```task = pid_task(find_vpid(pid), PIDTYPE_PID);```
  - Using that pointer printed out its fields to console using printk() function.
- - Using sprintf function i stored data into a buffer so that i can send it as a pointer to my kernal write.
- - I first converted *user-defined string to kernal-defined string*and then passed it as parameter to filp open so that it can create a file and write to it.```file = filp_open(filen, O_WRONLY|O_CREAT, 00700);```
- - Using kernal_write function i wrote inside the file pointer which i got through filp open.
+ - Using sprintf() function i stored data into a buffer so that i can send it as a pointer to my kernel write.
+ - I first converted *user-defined string to kernel-defined string*and then passed it as parameter to filp_open() so that it can create a file and write to it.```file = filp_open(filen, O_WRONLY|O_CREAT, 00700);```
+ - Using the kernal_write function i wrote inside the file pointer which i got through flip open.
   ```
  #include<linux/kernel.h>
 +#include<linux/init.h>
