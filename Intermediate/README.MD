@@ -75,7 +75,7 @@ struct msg_buffer {
    msg_id = msgget(my_key, 0666 | IPC_CREAT); //create message queue and return id
    message.msg_type = 1;
 ```
-- Program1 snippet-Sending message in queue-[full here](Intermediate/q2a.c)
+- Program1 snippet-Sending message in queue-[full here](https://github.com/ashcode028/Operating-System-in-action/blob/57456e6baba4ebd508662a49eb1798210e0b638e/Intermediate/q2a.c)
 ```
 FILE *fd= fopen("para1.txt","r");
       if(!fd){
@@ -93,7 +93,7 @@ FILE *fd= fopen("para1.txt","r");
    //msgsnd(msg_id, &message, sizeof(message), 0); //send message
    printf("Sent message is : %s \n", message.msg);
 ```
-- Program2 snippet -Sending the message in the queue-[full here](Intermediate/q2b.c)
+- Program2 snippet -Sending the message in the queue-[full here](https://github.com/ashcode028/Operating-System-in-action/blob/57456e6baba4ebd508662a49eb1798210e0b638e/Intermediate/q2b.c)
 ```
 FILE *fd= fopen("para2.txt","r");
       if(!fd){
@@ -111,7 +111,7 @@ FILE *fd= fopen("para2.txt","r");
    //msgsnd(msg_id, &message, sizeof(message), 0); //send message
    printf("Sent message is : %s \n", message.msg);
 ```
-- Program3 snippet to recieve a message from the queue-[full here](Intermediate/q2c.c)
+- Program3 snippet to recieve a message from the queue-[full here](https://github.com/ashcode028/Operating-System-in-action/blob/57456e6baba4ebd508662a49eb1798210e0b638e/Intermediate/q2c.c)
 ```
 key_t my_key;
    int msg_id;
@@ -139,7 +139,7 @@ key_t my_key;
   memset(srvAdrs.sin_zero, '\0', sizeof srvAdrs.sin_zero);  
   addr_size = sizeof srvAdrs;
 ```
-- Program1 snippet to send packet to the socket-[full](Intermediate/q3a.c)
+- Program1 snippet to send packet to the socket-[full](https://github.com/ashcode028/Operating-System-in-action/blob/57456e6baba4ebd508662a49eb1798210e0b638e/Intermediate/q3a.c)
 ```
 FILE *fd= fopen("para1.txt","r");
    if(!fd){
@@ -149,7 +149,7 @@ FILE *fd= fopen("para1.txt","r");
     if(sendto(sckid,buff,strlen(buff)+1 ,0,(struct sockaddr*)&srvAdrs,addr_size)<0)
       perror("Sending packets failed");
 ```
-- Program2 snippet to send packet to the socket-[full](Intermediate/q3b.c)
+- Program2 snippet to send packet to the socket-[full](https://github.com/ashcode028/Operating-System-in-action/blob/57456e6baba4ebd508662a49eb1798210e0b638e/Intermediate/q3b.c)
 ```
 FILE *fd= fopen("para2.txt","r");
    if(!fd){
@@ -159,7 +159,7 @@ FILE *fd= fopen("para2.txt","r");
     if(sendto(sckid,buff,strlen(buff)+1 ,0,(struct sockaddr*)&srvAdrs,addr_size)<0)
       perror("Sending packets failed");
 ```
-- Program3 snippet to recieve packet from the socket:-[full](Intermediate/q3c.c)
+- Program3 snippet to recieve packet from the socket:-[full](https://github.com/ashcode028/Operating-System-in-action/blob/57456e6baba4ebd508662a49eb1798210e0b638e/Intermediate/q3c.c)
 ```
  printf("waiting on port 8080\n");
   nBytes = recvfrom(sckid,buff,500,0,(struct sockaddr *)&srvSt, &addr_size);
@@ -245,14 +245,14 @@ data = buffer[*out];
             printf ("Writer %d writes %d to segment1\n",j, j*j+5);
             signal_s(semid, 0); /* signal semaphore for something used */
 ```
-- [Full](Intermediate/q4.c)
+- [Full](https://github.com/ashcode028/Operating-System-in-action/blob/57456e6baba4ebd508662a49eb1798210e0b638e/Intermediate/q4.c)
 ### Reader-Writer Problem with Synchronization
 - Write a C program that involves multiple processes/threads where one of the processes/threads is a writer while there are multiple reader processes. 
 - You need to take care of problems related to race conditions using POSIX mutexes and semaphores. The processes may use a shared memory for 8 bytes (64-bits) that could be written to or read from.
-- [Full](Intermediate/q5.c)
+- [Full](https://github.com/ashcode028/Operating-System-in-action/blob/57456e6baba4ebd508662a49eb1798210e0b638e/Intermediate/q5.c)
 ### Dining philosopher problem
 - Write a C program to solve the dining philosopher problem where the philosophers are represented by threads. You need to ensure that your solution is free of deadlocks, i.e. it should be designed such that it avoids/prevents deadlocks.
-- [Full](Intermediate/q6.c)
+- [Full](https://github.com/ashcode028/Operating-System-in-action/blob/57456e6baba4ebd508662a49eb1798210e0b638e/Intermediate/q6.c)
 ### Deadlock avoidance
 - Banker's Algorithm
 ```
